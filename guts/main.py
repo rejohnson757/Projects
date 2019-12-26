@@ -18,4 +18,15 @@ print('\n')
 print(summary.text.strip())
 print(rating.span.text)
 print(show_rating.time.text.strip())
-print(image.img)
+
+def search_tv():
+    source_2 = requests.get('https://www.imdb.com/?ref_=nv_home')
+    soup_2 = BeautifulSoup(source_2, 'html.parser')
+
+    search = requests.get('https://www.imdb.com/?ref')
+    user_input = input('Please enter a TV show or Movie: ')
+    user_search = search + user_input
+
+    return user_search
+
+search_tv()

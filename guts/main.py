@@ -18,4 +18,4 @@ print('\n')
 print(summary.text.strip())
 print(rating.span.text)
 print(show_rating.time.text.strip())
-print(image.img)
+

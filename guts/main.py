@@ -33,3 +33,4 @@ def search_tv():
 
 link = search_tv()
 print(link)
+print(link.find('div', class_='title'))

@@ -29,8 +29,33 @@ def search_tv():
 
     return user_search
 
+
     
 
 link = search_tv()
-print(link)
-print(link.find('div', class_='title'))
+source_3 = requests.get(link).text
+soup_3 = BeautifulSoup(source_3, 'html.parser')
+first_link = soup_3.find('td', class_='result_text').a['href']
+
+#print(first_link)
+imdb = 'https://imdb.com/' 
+#print(imdb + first_link)
+
+source_4 = requests.get(imdb + first_link).text
+
+soup_4 = BeautifulSoup(source_4, 'html.parser')
+
+article_2 = soup_4.find('article')
+
+
+title_2 = soup_4.find('div', class_='title_wrapper')
+summary_2 = soup_4.find('div', class_='summary_text')
+rating_2 = soup_4.find('div', class_='ratingValue')
+show_rating_2 = soup_4.find('div', class_='subtext')
+
+
+print(title_2.h1.text)
+print('\n')
+print(summary_2.text.strip())
+print(rating_2.span.text)
+print(show_rating_2.time.text.strip())

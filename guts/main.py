@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
+# web scraper
+
 source = requests.get('https://www.imdb.com/title/tt0944947/').text
 
 soup = BeautifulSoup(source, 'html.parser')

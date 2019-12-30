@@ -54,6 +54,8 @@ rating_2 = soup_4.find('div', class_='ratingValue')
 show_rating_2 = soup_4.find('div', class_='subtext')
 
 
+	
+
 print(title_2.h1.text)
 print('\n')
 print(summary_2.text.strip())

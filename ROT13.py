@@ -5,7 +5,12 @@
 alphabet = ['abcdefghijklmnopqrstuvwxyz']
 
 def rot_13(messge):
-	print('Please enter a message:')
-	text = input()
-	for letter in text 
-		letter = alphabet
+	text = input('Please enter a message: ')
+	for letter in text:
+		letter = ord(letter)
+		letter = letter + 13
+		if letter > ord('z'):
+			(letter - ord('z')) + ord('a')
+	print(letter)
+	
+rot_13('hello')

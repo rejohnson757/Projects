@@ -2,7 +2,6 @@
 
 '''This program will use Caesar cipher ROT13'''
 
-alphabet = ['abcdefghijklmnopqrstuvwxyz']
 
 def rot_13(messge):
 	text = input('Please enter a message: ')

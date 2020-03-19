@@ -11,11 +11,11 @@ def rot_13():
 		letter = ord(letter)
 		letter = letter + 13
 		if letter > ord('z'):
-			(letter - ord('z')) + ord('a')
-			
-		lst.append(chr(letter))
+			change = letter - ord('z')
+			letter = ord('a') + change - 1
+		lst.append(chr(letter)) 
 		
-	print(lst)
+	lst = ''.join(lst)
+	print(str(lst))
 	
 rot_13()
-
